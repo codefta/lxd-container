@@ -4,13 +4,13 @@ Dokumentasi untuk membuat sebuah simple wordpress site menggunakan LXD Container
 
 1. Install zfsutils-tools
 ```
-sudo install zfsutils
+sudo install zfsutils-linux
 ```
-2. lxd init
-3. lxc launch image:centos/7 server
-4. lxc launch image:centos/7 database
-    lxc list
-    lxc exec {container} -- {/bin/bash} / {command}
+2. `lxd init`
+3. `lxc launch image:centos/7 server`
+4. `lxc launch image:centos/7 database`
+    `lxc list` for see lists
+    `lxc exec {container} -- {/bin/bash} / {command}` for execute container /using container
 5. install wp, nginx, php-fpm in linux di kontainer server
     - Install nginx 
     ```
@@ -73,7 +73,7 @@ sudo install zfsutils
     ```
     server {
         listen   80;
-        server_name  17523233.uii.ac.id;
+        server_name  {your domain};
 
         # note that these lines are originally from the "location /" block
         root   /usr/share/nginx/html/wordpress;
